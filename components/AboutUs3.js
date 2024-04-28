@@ -13,10 +13,11 @@ export default function Welcome({navigation, route}) {
       <Image source={require('../assets/images/recycleSymbol1.png')} style={styles.imageBackground} />
 
       <Text style={styles.about} testID="10:2">
-        {`Our app is designed with a 
-simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
-feed.
-`}
+        {`In alignment with our environmentally focused mission we offer a recyclable pick
+         service, in which users can collect restaurant recyclables and be compensated 
+         through the recycling center’s refund. This process would benefit all parties and 
+         most importantly the environment.
+`       }
       </Text>
       <Button
         title="Next"
@@ -46,16 +47,16 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
   name: {
-    color: 'rgba(152, 197, 171, 1)',
+    color: '#000000',
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '400',
     marginBottom: 25,
-    marginTop: 70,
+    marginTop: 70
   },
   about: {
     color: 'rgba(52, 68, 101, 1)',
-    marginTop: 120,
+    marginTop: 100,
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     height: '30%',
   },
   button: {
-    marginTop: 150,
+    marginTop: 100,
     borderRadius: 10,
   }
 });

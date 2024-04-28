@@ -13,15 +13,16 @@ export default function Welcome({navigation, route}) {
       <Image source={require('../assets/images/recycleSymbol1.png')} style={styles.imageBackground} />
 
       <Text style={styles.about} testID="10:2">
-        {`Our app is designed with a 
-simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
-feed.
-`}
+        {`Through F&R Cycle, users can easily browse nearby restaurants and see which ones
+         have surplus food available for donation. With just a few taps, they can claim these i
+         tems and pick them up, ensuring that perfectly good food reaches those who need it 
+         most.
+`       }
       </Text>
       <Button
         title="Next"
         onPress={() => 
-          navigation.navigate('AboutUs2')
+          navigation.navigate('AboutUs3')
         }
         >
         <Frame1 style={styles.button}/>
@@ -46,12 +47,12 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
   name: {
-    color: 'rgba(152, 197, 171, 1)',
+    color: '#000000',
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '400',
     marginBottom: 25,
-    marginTop: 70,
+    marginTop: 70
   },
   about: {
     color: 'rgba(52, 68, 101, 1)',
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     height: '30%',
   },
   button: {
-    marginTop: 150,
+    marginTop: 100,
     borderRadius: 10,
   }
 });
