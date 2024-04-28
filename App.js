@@ -12,6 +12,8 @@ import UserLogin from './components/UserLogin'
 import UserAccCreate from './components/UserAccCreate'
 import BusinessOwnerLogin from './components/BusinessLogin'
 import BusinessAccCreate from './components/BusinessAccCreate'
+import UserMapMenu from './components/UserMapMenu'
+
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +66,12 @@ export default function App() {
           name='BusinessAccCreate'
           component={BusinessAccCreate}
         />
+
+        <Stack.Screen
+          name='UserMapMenu'
+          component={UserMapMenu}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

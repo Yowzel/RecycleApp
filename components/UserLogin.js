@@ -29,7 +29,7 @@ export default function Welcome({navigation, route}) {
             {'Forgot Password?'} 
         </Text>
         <View style={styles.button2}>
-            <Button title="Sign In" onPress={() => navigation.navigate('UserLogin')} color='#ffffff'/>
+            <Button title="Sign In" onPress={() => navigation.navigate('UserMapMenu')} color='#ffffff'/>
         </View> 
         <Text style={{marginTop: 20}}>
             <Button title="Create new account" onPress={() => navigation.navigate('UserAccCreate')}/>
