@@ -22,14 +22,10 @@ recyclables from
 local shops & 
 restaurants `}
       </Text>
-      <Button
-        title="Next"
-        onPress={() => 
-          navigation.navigate('AboutUs1')
-        }
-        >
-        <Frame1 style={styles.button}/>
-      </Button>
+      <View style={styles.button}>
+        <Button title="Login" onPress={() => navigation.navigate('BusOrUser')} color='#000000'/>
+      </View>
+      <Button title="Learn More" onPress={() => navigation.navigate('AboutUs1')}/>
     </View>
   );
 }
@@ -64,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 24,
     zIndex: 1,
-    marginBottom: 260,
+    marginBottom: 150,
   },
   imageBackground: {// Position the image absolutely relative to its container
     position: 'absolute',
@@ -76,7 +72,10 @@ const styles = StyleSheet.create({
     height: '30%',
   },
   button: {
-    marginTop: 150,
-    borderRadius: 10,
-  }
+    backgroundColor: 'rgba(152, 197, 171, 1)', 
+    paddingVertical: 15,
+    paddingHorizontal: 80,
+    borderRadius: 20,
+    marginBottom: 13,
+  },
 });

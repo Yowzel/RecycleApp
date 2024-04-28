@@ -7,6 +7,9 @@ import WelcomeScreen from './components/Welcome'
 import AboutUs1 from './components/AboutUs1'
 import AboutUs2 from './components/AboutUs2'
 import AboutUs3 from './components/AboutUs3'
+import BusOrUser from './components/BusOrUser'
+import UserLogin from './components/UserLogin'
+import UserAccCreate from './components/UserAccCreate'
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +36,21 @@ export default function App() {
         <Stack.Screen
           name='AboutUs3'
           component={AboutUs3}
+        />
+
+        <Stack.Screen
+          name='BusOrUser'
+          component={BusOrUser}
+        />
+
+        <Stack.Screen
+          name='UserLogin'
+          component={UserLogin}
+        />
+
+        <Stack.Screen
+          name='UserAccCreate'
+          component={UserAccCreate}
         />
       </Stack.Navigator>
     </NavigationContainer>

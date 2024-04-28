@@ -14,19 +14,13 @@ export default function Welcome({navigation, route}) {
 
       <Text style={styles.about} testID="10:2">
         {`Our app is designed with a 
-simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
-feed.
-`}
+        simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
+        feed.`}
       </Text>
-      <Button
-        title="Next"
-        onPress={() => 
-          navigation.navigate('AboutUs2')
-        }
-        >
-        <Frame1 style={styles.button}/>
-      </Button>
-    </View>
+      <View style={styles.button}>
+        <Button title="Continue" onPress={() => navigation.navigate('AboutUs2')} color='#000000'/>
+      </View>    
+  </View>
   );
 }
 
@@ -61,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 24,
     zIndex: 1,
-    marginBottom: 180,
+    marginBottom: 73,
     maxWidth: '90%',
   },
   imageBackground: {// Position the image absolutely relative to its container
@@ -74,7 +68,10 @@ const styles = StyleSheet.create({
     height: '30%',
   },
   button: {
-    marginTop: 150,
-    borderRadius: 10,
-  }
+    backgroundColor: 'rgba(152, 197, 171, 1)', 
+    paddingVertical: 15,
+    paddingHorizontal: 68,
+    borderRadius: 20,
+    marginBottom: 13,
+  },
 });

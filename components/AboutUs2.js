@@ -19,14 +19,9 @@ export default function Welcome({navigation, route}) {
          most.
 `       }
       </Text>
-      <Button
-        title="Next"
-        onPress={() => 
-          navigation.navigate('AboutUs3')
-        }
-        >
-        <Frame1 style={styles.button}/>
-      </Button>
+      <View style={styles.button}>
+        <Button title="Back to Home" onPress={() => navigation.navigate('Home')} color='#000000'/>
+      </View>
     </View>
   );
 }
@@ -47,7 +42,7 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
   name: {
-    color: '#000000',
+    color: 'rgba(152, 197, 171, 1)',
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '400',
@@ -62,7 +57,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 24,
     zIndex: 1,
-    marginBottom: 180,
+    marginBottom: 45,
     maxWidth: '90%',
   },
   imageBackground: {// Position the image absolutely relative to its container
@@ -75,7 +70,10 @@ const styles = StyleSheet.create({
     height: '30%',
   },
   button: {
-    marginTop: 100,
-    borderRadius: 10,
-  }
+    backgroundColor: 'rgba(152, 197, 171, 1)', 
+    paddingVertical: 15,
+    paddingHorizontal: 50,
+    borderRadius: 20,
+    marginBottom: 13,
+  },
 });

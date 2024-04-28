@@ -22,7 +22,7 @@ export default function Welcome({navigation, route}) {
       <Button
         title="Next"
         onPress={() => 
-          navigation.navigate('AboutUs2')
+          navigation.navigate('BusOrUser')
         }
         >
         <Frame1 style={styles.button}/>
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
   name: {
-    color: '#000000',
+    color: 'rgba(152, 197, 171, 1)',
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '400',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 24,
     zIndex: 1,
-    marginBottom: 180,
+    marginBottom: 120,
     maxWidth: '90%',
   },
   imageBackground: {// Position the image absolutely relative to its container
