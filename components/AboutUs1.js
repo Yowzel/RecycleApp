@@ -1,35 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View, Image } from 'react-native';
 import Frame1 from './Frame1'
-import AboutUs1 from './AboutUs1'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Welcome({navigation}) {
+export default function Welcome({navigation, route}) {
   return (
     <View style={styles.root}>
-      <Text style={styles.welcomeToFRCycle} testID="3:5">
-        {`Welcome to 
- `}
-      </Text>
       <Text style={styles.name}>
-        {'F&R Cycle'}
+        {'About Us'}
       </Text>
       <Image source={require('../assets/images/recycleSymbol1.png')} style={styles.imageBackground} />
 
       <Text style={styles.about} testID="10:2">
-        {`A place where you can
-find left over food &
-recyclables from 
-local shops & 
-restaurants `}
+        {`Our app is designed with a 
+simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
+feed. 
+`}
       </Text>
-      <Button
-        title="Next"
-        onPress={() => 
-          navigation.navigate('AboutUs1')
-        }
-        >
-        <Frame1 style={styles.button}/>
-      </Button>
+      <Frame1 style={styles.button}/>
     </View>
   );
 }

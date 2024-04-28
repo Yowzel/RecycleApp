@@ -25,7 +25,7 @@ const Frame1 = () => {
     buttonText: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: '#B8C7E6',
+        color: '#000000',
     },
   });
   
