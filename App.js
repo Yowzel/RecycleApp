@@ -10,6 +10,8 @@ import AboutUs3 from './components/AboutUs3'
 import BusOrUser from './components/BusOrUser'
 import UserLogin from './components/UserLogin'
 import UserAccCreate from './components/UserAccCreate'
+import BusinessOwnerLogin from './components/BusinessLogin'
+import BusinessAccCreate from './components/BusinessAccCreate'
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +53,16 @@ export default function App() {
         <Stack.Screen
           name='UserAccCreate'
           component={UserAccCreate}
+        />
+
+        <Stack.Screen
+          name='BusinessOwnerLogin'
+          component={BusinessOwnerLogin}
+        />
+
+        <Stack.Screen
+          name='BusinessAccCreate'
+          component={BusinessAccCreate}
         />
       </Stack.Navigator>
     </NavigationContainer>

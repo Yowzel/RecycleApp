@@ -13,7 +13,7 @@ export default function Welcome({navigation, route}) {
   return (
     <View style={styles.root}>
         <Text style={styles.header}>
-            {'Create Your Account'}
+            {'Create Business'}
         </Text>
         <Text style={styles.subheader}>
             {'Start the cycle of kindness'}
@@ -21,21 +21,24 @@ export default function Welcome({navigation, route}) {
 
      
         <Text style={styles.textboxinput}>
-            {'Name'}
+            {'Organization Name'}
         </Text>
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onChangeText} value ={text} placeholder='   Enter your name' style={styles.input} />
+            <TextInput onChangeText={onChangeText} value ={text} placeholder='   Enter your organization name' style={styles.input} />
         </SafeAreaView>
     
         <Text style={styles.textboxinput}>
-            {'Email'}
+            {'Organization Phone Number'}
         </Text>
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onEmailText} value ={EmailText} placeholder='   Enter your email' style={styles.input} />
+            <TextInput onChangeText={onEmailText} value ={EmailText} placeholder='   Enter your phone number' style={styles.input} />
         </SafeAreaView>
       
         <Text style={styles.textboxinput}>
-            {'Password'}
+            {'Organization Address'}
+        </Text>
+        <Text style={styles.addressHeader}>
+            {'Street Address'}
         </Text>
         <SafeAreaView style={styles.container}>
             <TextInput onChangeText={onPasswordText} value ={PasswordText} placeholder='   Create a password' style={styles.input} />
@@ -70,10 +73,10 @@ const styles = StyleSheet.create({
     marginLeft: 55,
   },
   textboxinput: {
-    color: 'rgba(52, 68, 101, 1)',
-    marginTop: 20,
+    color: '#98C5AB',
+    marginTop: 10,
     marginLeft: 45,
-    fontSize: 18,
+    fontSize: 14,
     zIndex: 100,
     marginBottom: 0,
     maxWidth: '90%',
@@ -112,4 +115,13 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 80
   },
+  addressHeader: {
+    color: 'rgba(52, 68, 101, 1)',
+    marginLeft: 45,
+    fontSize: 11,
+    zIndex: 100,
+    marginBottom: 0,
+    maxWidth: '90%',
+    marginTop: 8,
+    }
 });

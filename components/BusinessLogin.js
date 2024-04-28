@@ -8,41 +8,40 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default function Welcome({navigation, route}) {
 
     const [text, onChangeText] = React.useState('')
-    const [EmailText, onEmailText] = React.useState('')
-    const [PasswordText, onPasswordText] = React.useState('') 
+    const [organization, onOrganization] = React.useState('')
+    const [password, onPassword] = React.useState('')
   return (
     <View style={styles.root}>
         <Text style={styles.header}>
-            {'Create Your Account'}
+            {'Business Owner'}
         </Text>
-        <Text style={styles.subheader}>
-            {'Start the cycle of kindness'}
+        <Text style={styles.otherHeader}>
+            {'Log in'}
         </Text>
-
      
-        <Text style={styles.textboxinput}>
-            {'Name'}
-        </Text>
+       
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onChangeText} value ={text} placeholder='   Enter your name' style={styles.input} />
+            <TextInput onChangeText={onChangeText} value ={text} placeholder='   Phone number, username, or email' style={styles.input} />
         </SafeAreaView>
     
-        <Text style={styles.textboxinput}>
-            {'Email'}
-        </Text>
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onEmailText} value ={EmailText} placeholder='   Enter your email' style={styles.input} />
+            <TextInput onChangeText={onOrganization} value ={organization} placeholder='   Organization name' style={styles.input} />
         </SafeAreaView>
       
-        <Text style={styles.textboxinput}>
-            {'Password'}
-        </Text>
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onPasswordText} value ={PasswordText} placeholder='   Create a password' style={styles.input} />
+            <TextInput onChangeText={onPassword} value ={password} placeholder='   Password' style={styles.input} />
         </SafeAreaView>
-        <View style={styles.button}>
-            <Button title="Continue" onPress={() => navigation.navigate('AboutUs2')} color='#000000'/>
-        </View>    
+        
+        <Text style={{marginLeft: 150, marginTop: 20}}> 
+            {'Forgot Password?'} 
+        </Text>
+        <View style={styles.button2}>
+            <Button title="Sign In" onPress={() => navigation.navigate('UserLogin')} color='#ffffff'/>
+        </View> 
+        <Text style={{marginTop: 20}}>
+            <Button title="Create new account" onPress={() => navigation.navigate('BusinessAccCreate')}/>
+        </Text>
+
   </View>
   );
 }
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
 
-    //alignItems: 'center',
+    alignItems: 'center',
     marginLeft: 0,
     backgroundColor: 'rgba(255, 254, 248, 1)',
   },
@@ -59,7 +58,8 @@ const styles = StyleSheet.create({
     flex: .1,
     backgroundColor: "#fff",
     paddingTop: StatusBar.currentHeight,
-    marginBottom: 40,
+    marginBottom: 10,
+    marginTop: 20,
   },
   input: {
     height: 40,
@@ -67,11 +67,11 @@ const styles = StyleSheet.create({
     width: 260,
     backgroundColor: '#DAEED7',
     borderWidth: 0,
-    marginLeft: 55,
+    
   },
   textboxinput: {
     color: 'rgba(52, 68, 101, 1)',
-    marginTop: 20,
+    marginTop: 0,
     marginLeft: 45,
     fontSize: 18,
     zIndex: 100,
@@ -91,8 +91,16 @@ const styles = StyleSheet.create({
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '400',
-    marginBottom: 0,
+    marginBottom: 10,
     marginTop: 70,
+  },
+  otherHeader: {
+    color: '#98C5AB',
+    fontSize: 36,
+    textAlign: 'center',
+    fontWeight: '400',
+    marginBottom: 100,
+    marginTop: 0,
   },
   subheader: {
     color: 'rgba(152, 197, 171, 1)',
@@ -102,14 +110,21 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     marginTop: 0,
   },
-  button: {
+  button1: {
     backgroundColor: 'rgba(152, 197, 171, 1)', 
     paddingVertical: 15,
     paddingHorizontal: 15,
     width: 200,
     borderRadius: 20,
-    marginTop: 196,
+    marginTop: 300,
     marginBottom: 0,
-    marginLeft: 80
+    
   },
+  button2: {
+    backgroundColor: 'rgba(152, 197, 171, 1)', 
+    paddingVertical: 15,
+    width: '69%',
+    borderRadius: 0,
+    marginTop: 30,
+  }
 });

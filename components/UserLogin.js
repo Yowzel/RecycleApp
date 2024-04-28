@@ -7,9 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function Welcome({navigation, route}) {
 
-    const [text, onChangeText] = React.useState('  Phone number, username, or email')
-    const [EmailText, onEmailText] = React.useState('  Password')
-    const [PasswordText, onPasswordText] = React.useState(' Create a password') 
+    const [text, onChangeText] = React.useState('')
+    const [EmailText, onEmailText] = React.useState('')
   return (
     <View style={styles.root}>
         <Text style={styles.header}>
@@ -18,12 +17,12 @@ export default function Welcome({navigation, route}) {
      
        
         <SafeAreaView style={styles.container}>
-            <TextInput onChangeText={onChangeText} value ={text} style={styles.input} />
+            <TextInput onChangeText={onChangeText} value ={text} placeholder='   Phone number, username, or email' style={styles.input} />
         </SafeAreaView>
     
       
         <SafeAreaView style={styles.container}>
-            <TextInput onEmailText={onEmailText} value ={EmailText} style={styles.input} />
+            <TextInput onChangeText={onEmailText} value ={EmailText} placeholder='   Password' style={styles.input} />
         </SafeAreaView>
         
         <Text style={{marginLeft: 150}}> 

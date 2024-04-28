@@ -26,7 +26,7 @@ export default function Welcome({navigation, route}) {
 
       <View style={styles.button2}>
         
-        <Button title="Organization" onPress={() => navigation.navigate('BusOrUser')} color='#ffffff'/>
+        <Button title="Organization" onPress={() => navigation.navigate('BusinessOwnerLogin')} color='#ffffff'/>
       </View>
     </View>
   );
