@@ -15,7 +15,7 @@ export default function Welcome({navigation, route}) {
       <Text style={styles.about} testID="10:2">
         {`Our app is designed with a 
 simple purpose in mind: to connect low-income individuals and families with restaurants willing to donate surplus food items. We believe that every meal matters and no edible food should go to waste when there are hungry mouths to 
-feed. 
+feed.
 `}
       </Text>
       <Frame1 style={styles.button}/>
